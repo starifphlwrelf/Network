@@ -1,0 +1,63 @@
+{
+    "name": "test-network-voter",
+    "version": "1.0.0",
+    "isLocal": true,
+    "client": {
+        "organization": "voter",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "voter": {
+            "mspid": "votermsp",
+            "peers": [
+                "peer0.voter",
+                "peer1.voter"
+            ],
+            "certificateAuthorities": [
+                "ca.voter"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.voter": {
+            "url": "grpcs://localhost:5555",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIURs8vtxd/YYR5O7tBAG1y+07oyXAwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIzMDcwNjEwMTAwMFoXDTM4MDcwMjEwMTAwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEhvXj7h9/opucQa3uvd/hZd8Z\nalTLDnNL/7YbTJw0B/o9CZbbqJvKA4y1c2kO0xRlu6fgKuMFuvIYS4JtnFsyM6NF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFKVBnnfA95GPkdkmr7eDljvYo/JdMAoGCCqGSM49BAMCA0cAMEQCIESJVZCMRR2D\n5YZJUtJtWUgEl3x38xcTngtPRUck27dlAiAj0weKes9OvGf1xlRyhqmJ1FebRW/P\npXz55mWHgY4S7w==\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.voter",
+                "hostnameOverride": "peer0.voter"
+            }
+        },
+        "peer1.voter": {
+            "url": "grpcs://localhost:5565",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIURs8vtxd/YYR5O7tBAG1y+07oyXAwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIzMDcwNjEwMTAwMFoXDTM4MDcwMjEwMTAwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEhvXj7h9/opucQa3uvd/hZd8Z\nalTLDnNL/7YbTJw0B/o9CZbbqJvKA4y1c2kO0xRlu6fgKuMFuvIYS4JtnFsyM6NF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFKVBnnfA95GPkdkmr7eDljvYo/JdMAoGCCqGSM49BAMCA0cAMEQCIESJVZCMRR2D\n5YZJUtJtWUgEl3x38xcTngtPRUck27dlAiAj0weKes9OvGf1xlRyhqmJ1FebRW/P\npXz55mWHgY4S7w==\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer1.voter",
+                "hostnameOverride": "peer1.voter"
+            }
+        }
+    },
+    "certificateAuthorities": {
+        "ca.voter": {
+            "url": "https://localhost:5500",
+            "caName": "ca-voter",
+            "tlsCACerts": {
+                "pem": [
+                    "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIURs8vtxd/YYR5O7tBAG1y+07oyXAwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIzMDcwNjEwMTAwMFoXDTM4MDcwMjEwMTAwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEhvXj7h9/opucQa3uvd/hZd8Z\nalTLDnNL/7YbTJw0B/o9CZbbqJvKA4y1c2kO0xRlu6fgKuMFuvIYS4JtnFsyM6NF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFKVBnnfA95GPkdkmr7eDljvYo/JdMAoGCCqGSM49BAMCA0cAMEQCIESJVZCMRR2D\n5YZJUtJtWUgEl3x38xcTngtPRUck27dlAiAj0weKes9OvGf1xlRyhqmJ1FebRW/P\npXz55mWHgY4S7w==\n-----END CERTIFICATE-----\n"
+                ]
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}

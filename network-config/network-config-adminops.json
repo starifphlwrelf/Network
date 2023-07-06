@@ -1,0 +1,63 @@
+{
+    "name": "test-network-adminops",
+    "version": "1.0.0",
+    "isLocal": true,
+    "client": {
+        "organization": "adminops",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "adminops": {
+            "mspid": "adminopsmsp",
+            "peers": [
+                "peer0.adminops",
+                "peer1.adminops"
+            ],
+            "certificateAuthorities": [
+                "ca.adminops"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.adminops": {
+            "url": "grpcs://localhost:6666",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIUEQbn3Zgq0r0VThbqFlgPeNYDu20wCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIzMDcwNjEwMTAwMFoXDTM4MDcwMjEwMTAwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEdGyV9goJGy7130ePZM/6XJ57\nKkptS3qm3KyAf676Mi+V9DtEGO9di+y+RTc8+R/ww18tXcLHc0wvQDLNXKR7/6NF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFLYAcQSB3NSk9sNZ3YRA7ZoXX7XQMAoGCCqGSM49BAMCA0cAMEQCIGzF18ieC7D7\n4TCy3YEAjbjst/NN5pW/Ct5BRGdVRrFzAiAZMKqsqK0A9dxBi+H7cqlkb4feDZSO\ntpkfAABmtrx8OA==\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.adminops",
+                "hostnameOverride": "peer0.adminops"
+            }
+        },
+        "peer1.adminops": {
+            "url": "grpcs://localhost:6676",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIUEQbn3Zgq0r0VThbqFlgPeNYDu20wCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIzMDcwNjEwMTAwMFoXDTM4MDcwMjEwMTAwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEdGyV9goJGy7130ePZM/6XJ57\nKkptS3qm3KyAf676Mi+V9DtEGO9di+y+RTc8+R/ww18tXcLHc0wvQDLNXKR7/6NF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFLYAcQSB3NSk9sNZ3YRA7ZoXX7XQMAoGCCqGSM49BAMCA0cAMEQCIGzF18ieC7D7\n4TCy3YEAjbjst/NN5pW/Ct5BRGdVRrFzAiAZMKqsqK0A9dxBi+H7cqlkb4feDZSO\ntpkfAABmtrx8OA==\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer1.adminops",
+                "hostnameOverride": "peer1.adminops"
+            }
+        }
+    },
+    "certificateAuthorities": {
+        "ca.adminops": {
+            "url": "https://localhost:6600",
+            "caName": "ca-adminops",
+            "tlsCACerts": {
+                "pem": [
+                    "-----BEGIN CERTIFICATE-----\nMIICFjCCAb2gAwIBAgIUEQbn3Zgq0r0VThbqFlgPeNYDu20wCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIzMDcwNjEwMTAwMFoXDTM4MDcwMjEwMTAwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEdGyV9goJGy7130ePZM/6XJ57\nKkptS3qm3KyAf676Mi+V9DtEGO9di+y+RTc8+R/ww18tXcLHc0wvQDLNXKR7/6NF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFLYAcQSB3NSk9sNZ3YRA7ZoXX7XQMAoGCCqGSM49BAMCA0cAMEQCIGzF18ieC7D7\n4TCy3YEAjbjst/NN5pW/Ct5BRGdVRrFzAiAZMKqsqK0A9dxBi+H7cqlkb4feDZSO\ntpkfAABmtrx8OA==\n-----END CERTIFICATE-----\n"
+                ]
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}
